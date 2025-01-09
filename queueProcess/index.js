@@ -1,25 +1,21 @@
 const express = require('express');
-const userRouter = require('./Routes/userRoute');  
+
+require('dotenv').config()
+
+
+const { connectRabbitMQ } = require('./config/rabbitmq');
+const userRouter = require('./Routes/userRoutes');
+const queueRouter = require('./Routes/queueRoutes');
+const startWorker = require('./service/worker');
 
 const app = express();
 
-require('dotenv').config();
-
-require('./config/DbConnection').dbConnection()
-
-const PORT = process.env.PORT || 4000;
-
 app.use(express.json());
+require('./config/DbConnection').dbConnection()
+connectRabbitMQ().then(() => startWorker());
 
 app.use('/api/v1/auth', userRouter);
+app.use('/api/v1/queue', queueRouter);
 
-app.get("/", (req, res) => {
-    return res.json({
-        success: true,
-        msg: "Your server is up and running!"
-    });
-});
-
-app.listen(PORT, () => {
-    console.log(`App is listening on port ${PORT}`);
-});
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
