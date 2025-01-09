@@ -1,0 +1,18 @@
+{"level":"error","message":"Error distributing user: E11000 duplicate key error collection: GuruCool.users index: username_1 dup key: { username: null }"}
+{"level":"error","message":"Error distributing user: E11000 duplicate key error collection: GuruCool.users index: username_1 dup key: { username: null }"}
+{"level":"info","message":"New user created: Balak"}
+{"level":"info","message":"User Balak connected to astrologer RajBABA"}
+{"level":"info","message":"New user created: Balak1"}
+{"level":"info","message":"User Balak1 connected to astrologer KAKA_BABA"}
+{"level":"info","message":"New user created: Balak2"}
+{"level":"info","message":"User Balak2 connected to astrologer Preeti_BABA"}
+{"level":"info","message":"New user created: Balak1"}
+{"level":"info","message":"User Balak1 connected to astrologer RajBABA"}
+{"level":"info","message":"New user created: Balak4"}
+{"level":"info","message":"User Balak4 connected to astrologer KAKA_BABA"}
+{"level":"info","message":"New user created: Balak5"}
+{"level":"info","message":"User Balak5 connected to astrologer Preeti_BABA"}
+{"level":"info","message":"New user created: Balak456"}
+{"level":"info","message":"User Balak456 connected to astrologer RajBABA"}
+{"level":"info","message":"New user created: Balak456"}
+{"level":"info","message":"User Balak456 connected to astrologer KAKA_BABA"}
